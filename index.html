@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/itc-custom-select.css" />
+    <script src="/itc-custom-select.js"></script>
+    <script src="/index.js"></script>
+    <meta name="theme-color" content="#4285f4" />
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <div class="preferences">
+      <div class="preferences__container">
+        <h1 class="preferences__title">
+          Preferences
+          <small class="preferences__desc">
+            On this page you can configure the main system parameters available
+            for customization
+          </small>
+        </h1>
+        <div class="preferences__form form">
+          <div class="form__custom-input custom-input">
+            <label for="companyTitle" class="custom-input__label">
+              Company title
+            </label>
+            <input
+              type="text"
+              class="custom-input__text-field"
+              placeholder="Default"
+              id="companyTitle"
+            />
+          </div>
+          <div class="preferences__form-row">
+            <div class="form__custom-input custom-input">
+              <label for="companyTitle" class="custom-input__label">
+                First Day
+              </label>
+
+              <div class="itc-select" id="select-firstDay">
+                <button
+                  type="button"
+                  class="itc-select__toggle"
+                  name="First Day"
+                  value=""
+                  data-select="toggle"
+                  data-index="-1"
+                  id="btn-firstDay"
+                ></button>
+                <div class="itc-select__dropdown">
+                  <ul class="itc-select__options">
+                    <li
+                      class="itc-select__option"
+                      data-select="option"
+                      data-value="Monday"
+                      data-index="0"
+                    >
+                      Monday
+                    </li>
+                    <li
+                      class="itc-select__option"
+                      data-select="option"
+                      data-value="Sunday"
+                      data-index="1"
+                    >
+                      Sunday
+                    </li>
+                    <li
+                      class="itc-select__option"
+                      data-select="option"
+                      data-value="Sistem"
+                      data-index="2"
+                    >
+                      Sistem
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="preferences__form-row">
+            <div class="form__custom-input custom-input">
+              <label for="companyTitle" class="custom-input__label">
+                Container Width
+              </label>
+              <div class="itc-select" id="select-containerWidth">
+                <button
+                  type="button"
+                  class="itc-select__toggle"
+                  name="Container Width"
+                  value=""
+                  data-select="toggle"
+                  data-index="-1"
+                  id="btn-containerWidth"
+                ></button>
+                <div class="itc-select__dropdown">
+                  <ul class="itc-select__options">
+                    <li
+                      class="itc-select__option"
+                      data-select="option"
+                      data-value="Fixed"
+                      data-index="0"
+                    >
+                      Fixed
+                    </li>
+                    <li
+                      class="itc-select__option"
+                      data-select="option"
+                      data-value="relativ"
+                      data-index="1"
+                    >
+                      Relative
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="preferences__form-row">
+            <div class="form__custom-input custom-input">
+              <label for="select-homepage" class="custom-input__label">
+                Homepage
+              </label>
+              <div class="itc-select" id="select-homepage">
+                <button
+                  type="button"
+                  class="itc-select__toggle"
+                  name="homepage"
+                  value=""
+                  data-select="toggle"
+                  data-index="-1"
+                  id="btn-homepage"
+                ></button>
+                <div class="itc-select__dropdown">
+                  <ul class="itc-select__options">
+                    <li
+                      class="itc-select__option"
+                      data-select="option"
+                      data-value="Starred Projects"
+                      data-index="0"
+                    >
+                      Starred Projects
+                    </li>
+                    <li
+                      class="itc-select__option"
+                      data-select="option"
+                      data-value="Sistem"
+                      data-index="1"
+                    >
+                      Sistem
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form__custom-input custom-input">
+            <label for="indentSize" class="custom-input__label">
+              Indent Size
+            </label>
+            <input
+              type="text"
+              class="custom-input__text-field"
+              placeholder="Default"
+              id="indentSize"
+            />
+          </div>
+          <div class="form__custom-input custom-input">
+            <label for="personalCodeOne" class="custom-input__label">
+              Personal Code
+            </label>
+
+            <div class="custom-input__group">
+              <input
+                type="text"
+                class="preferences__form-code"
+                id="personalCodeOne"
+                maxlength="4"
+              />
+              <span class="form__custom-input-span">-</span>
+              <input
+                type="text"
+                class="preferences__form-code"
+                id="personalCodeTwo"
+                maxlength="4"
+              />
+              <span class="form__custom-input-span">-</span>
+              <input
+                type="text"
+                class="preferences__form-code"
+                id="personalCodeThre"
+                maxlength="4"
+              />
+            </div>
+          </div>
+          <div class="custom-input__item">
+            <label for="companyTitle" class="custom-input__label">
+              Theme
+            </label>
+            <div class="custom-input__radio-btn">
+              <label class="cutom-input__label"
+                ><input
+                  name="origin"
+                  type="radio"
+                  value="google"
+                  id="ligthTheme"
+                  checked
+                />
+                Light</label
+              >
+              <label class="cutom-input__label"
+                ><input
+                  name="origin"
+                  type="radio"
+                  value="google"
+                  id="darkTheme"
+                />
+                Dark</label
+              >
+            </div>
+          </div>
+          <div class="form__custom-input custom-input">
+            <button class="custom-btn__save" id="btnSave">
+              Apply and Save
+            </button>
+            <button class="custom-btn__cancel" id="btnClancel">Cancel</button>
+          </div>
+        </div>
+        <div>
+          <img class="footerImg" src="/bg-img.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
