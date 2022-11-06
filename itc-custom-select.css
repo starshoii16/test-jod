@@ -1,0 +1,107 @@
+.itc-select {
+  position: relative;
+  border: 1px solid var(--input-focus);
+  border-radius: 7px;
+  max-width: 100%;
+}
+
+.itc-select__toggle {
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Ubuntu";
+  color: var(--color-text);
+  justify-content: space-between;
+  line-height: 1.4;
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  gap: 4px;
+  width: 196px;
+  height: 32px;
+  background: var(--input-title);
+  border: 1px solid var(--input-hover-two);
+  border-radius: 6px;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  outline: none;
+}
+.itc-select__toggle:focus {
+  border: 1px solid var(--btn);
+}
+
+.itc-select__toggle::after {
+  flex-shrink: 0;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-left: 1rem;
+  background-image: url("/Vector.png");
+  background-size: 12px 7px;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.itc-select__toggle:focus {
+  outline: none;
+}
+
+.itc-select_show .itc-select__toggle::after {
+  background-image: var(--url-vector);
+}
+
+.itc-select__dropdown {
+  position: absolute;
+  top: 33px;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  display: none;
+  max-height: 10rem;
+  overflow-y: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 1px 5px 4px rgb(0 0 0 / 25%);
+}
+.itc-select_show .itc-select__dropdown {
+  display: block;
+}
+.itc-select_show .itc-select__backdrop {
+  display: block;
+}
+.itc-select__options {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.itc-select__option {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  gap: 4px;
+  width: 196px;
+  height: 32px;
+  background: var(--select-input-color);
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  color: var(--color-text);
+}
+
+.itc-select__option_selected {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.itc-select__option:hover {
+  background-color: var(--input-hover-two);
+  cursor: pointer;
+  transition: 0.2s background-color ease-in-out;
+}

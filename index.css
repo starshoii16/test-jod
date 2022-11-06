@@ -1,0 +1,239 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+:root {
+  --bg-color: #f8f8f8;
+  --color-text: #0b0a0a;
+  --btn-hover-blue: #205eb0;
+  --preferences-color: #b0b5bd;
+  --btn: #2a75db;
+  --input: #585050;
+  --input-hover-two: #dfdada;
+  --input-title: #dfdada;
+  --span-color: #0b0a0a;
+  --select-input-color: #f8f8f8;
+  --input-focus: #887c7c;
+  --url-vector: url("/Vector-blue.png");
+  --btn-cancel: #f8f8f8;
+  --btn-save: #2a75db;
+  --btn-save-color: #f8f8f8;
+  --btn-save-hover: #f0f6ff;
+}
+
+html[data-theme="dark"] {
+  --color-text: #f3f3f3;
+  --preferences-color: #0c0d0d;
+  --btn: #aac9f1;
+  --bg-color: #424242;
+  --global-theme-toggle-bg: #b9d5fc;
+  --input: #dfdada;
+  --input-title: #585050;
+  --bg-color: #585050;
+  --global-theme-toggle-bg: #f0f6ff;
+  --bg-color: #1e1d1d;
+  --input-hover-two: #887c7c;
+  --span-color: white;
+  --select-input-color: #424242;
+  --input-focus: #887c7c;
+  --url-vector: url("/Vector-dark.png");
+  --btn-cancel: #424242;
+  --btn-save: #b9d5fc;
+  --btn-save-color: #3a3939;
+  --btn-hover-blue: #d4e4fa;
+}
+body {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+}
+.preferences {
+  background: var(--preferences-color);
+  max-width: 100%;
+}
+.preferences__container {
+  background: var(--bg-color);
+  max-width: 968px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1px 32px;
+}
+.preferences__footerImg {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.preferences__form {
+  max-width: 320px;
+  width: 100%;
+}
+.preferences__form-row {
+  display: flex;
+}
+.preferences__title {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 32px;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+}
+.preferences__desc {
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--input);
+  margin-top: 4px;
+}
+.custom-input {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.custom-input__label {
+  color: var(--input);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  width: 107px;
+}
+.custom-input__text-field {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  gap: 4px;
+  width: 196px;
+  height: 32px;
+  background: var(--input-title);
+  border: 1px solid var(--input-focus);
+  border-radius: 6px;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  color: var(--color-text);
+  outline: none;
+}
+.custom-input__text-field:focus {
+  border: 1px solid var(--btn);
+}
+.custom-input__text-field:hover {
+  border: 1px solid var(--btn);
+}
+.preferences__form-code {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  gap: 4px;
+  background: var(--input-title);
+  border: 1px solid var(--input-focus);
+  border-radius: 6px;
+  flex: none;
+  order: 0;
+  width: 50px;
+  height: 32px;
+  color: var(--color-text);
+  outline: none;
+}
+.preferences__form-code:hover {
+  border: 1px solid var(--btn);
+}
+.preferences__form-code:focus {
+  border: 1px solid var(--btn);
+}
+.form__custom-input-span {
+  margin: 0;
+  padding: 0;
+}
+.custom-input__group {
+  display: flex;
+  width: 100%;
+  max-width: 196px;
+  gap: 8px;
+  align-items: center;
+}
+.custom-input__group input {
+  flex: 1;
+}
+.preferences__form-code {
+  padding-left: 8px;
+}
+.custom-input__radio-btn {
+  display: flex;
+  flex-direction: column;
+}
+.custom-input__radio-btn input {
+  margin-bottom: 14px;
+}
+.custom-input__item {
+  display: flex;
+  margin-top: 40px;
+  gap: 16px;
+  margin-bottom: 10 px;
+}
+.custom-btn__save {
+  padding: 4px 8px;
+  background: var(--btn-save);
+  border-radius: 3px;
+  border: none;
+  height: 32px;
+  color: var(--btn-save-color);
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+}
+.custom-btn__save:hover {
+  color: var(--btn-save-color);
+  background: var(--btn-hover-blue);
+}
+.custom-btn__save:active {
+  color: var(--btn-hover-blue);
+  background: var(--input-title);
+}
+.custom-btn__cancel {
+  padding: 4px 8px;
+  background: var(--btn-cancel);
+  border: none;
+  height: 32px;
+  color: var(--btn);
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-size: 14px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+.custom-btn__cancel:hover {
+  border: var(--btn-hover-blue);
+  border: 1px solid;
+}
+.custom-btn__cancel:active {
+  color: var(--btn-hover-blue);
+  background: var(--input-title);
+  border: none;
+}
+.cutom-input__label {
+  color: var(--color-text);
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+.form__custom-input-span {
+  color: var(--span-color);
+}
